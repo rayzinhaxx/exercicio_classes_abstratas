@@ -1,6 +1,6 @@
 package lanche;
 
-public class Lanche {
+public abstract class Lanche {
 	private double preco;
 
 	public int tempoDeEntrega(int distancia) {
