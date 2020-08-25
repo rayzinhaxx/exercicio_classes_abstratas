@@ -57,16 +57,15 @@ public class Menu {
 				break;
 			case 3:
 				Bolo bolo = new Bolo();
-				String massaBolo, cobertura, recheio;
 				
 				System.out.println("\nVocê escolheu **Bolo**\n");
 				
 				System.out.println("Insira a massa que você deseja: ");
-				massaBolo = scan.next();
+				String massaBolo = scan.next();
 				System.out.println("Insira a cobertura que você deseja: ");
-				cobertura = scan.next();
+				String cobertura = scan.next();
 				System.out.println("Insira o recheio que você deseja: ");
-				recheio = scan.next();
+				String recheio = scan.next();
 				
 				System.out.println("Informe sua distância em km para calcularmos o tempo de entrega e o valor do seu pedido:");
 				distancia = scan.nextInt();

@@ -22,7 +22,8 @@ public class Massa extends Lanche{
 			valor += 20;
 		}
 		
-		return valor;
+		super.setPreco(valor);
+		return super.getPreco();
 	}
 	
 	public String getMolho() {

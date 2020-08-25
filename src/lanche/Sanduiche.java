@@ -11,7 +11,8 @@ public class Sanduiche extends Lanche{
 	
 	//2 reais por ingrediente + 0,75 por km de distância
 	public double valorPedido(int distancia, int qtdIngredientes) {
-		return (qtdIngredientes * 2) + (distancia * 0.75);
+		super.setPreco((qtdIngredientes * 2) + (distancia * 0.75));
+		return super.getPreco();
 	}
 	
 	public String[] getIngredientes() {

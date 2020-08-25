@@ -12,7 +12,8 @@ public class Bolo extends Lanche{
 	}
 	
 	public double valorPedido(int distancia) {
-		return (distancia * 0.75) + 35;
+		super.setPreco((distancia * 0.75) + 35);
+		return super.getPreco();
 	}
 	
 	public String getMassa() {
