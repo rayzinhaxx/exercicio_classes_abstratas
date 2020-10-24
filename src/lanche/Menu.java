@@ -6,7 +6,7 @@ public class Menu {
 	Scanner scan = new Scanner(System.in);
 	
 	public void fazerPedido() {
-		System.out.println("Selecione uma opção:\n1 - Sanduíches\n2 - Massas\n3 - Bolos");
+		System.out.println("Selecione uma opÃ§Ã£o:\n1 - SanduÃ­ches\n2 - Massas\n3 - Bolos");
 		subMenu(scan.nextInt());
 	}
 	
@@ -18,9 +18,9 @@ public class Menu {
 				String ingredientes[] = new String[10];
 				String ingrediente = "";
 				int i = 0;
-				System.out.println("\nVocê escolheu **Sanduíche**\n");
+				System.out.println("\nVocÃª escolheu **SanduÃ­che**\n");
 				
-				System.out.println("Digite os ingredientes do seu sanduíche:\nSe desejar finalizar, digite 0.");
+				System.out.println("Digite os ingredientes do seu sanduÃ­che:\nSe desejar finalizar, digite 0.");
 				ingrediente = scan.nextLine();
 				
 				while ((!ingrediente.equals("0")) && i < 10) {
@@ -30,50 +30,50 @@ public class Menu {
 				}
 				sanduiche.setIngredientes(ingredientes);
 				
-				System.out.println("Informe sua distância em km para calcularmos o tempo de entrega e o valor do seu pedido:");
+				System.out.println("Informe sua distï¿½ncia em km para calcularmos o tempo de entrega e o valor do seu pedido:");
 				distancia = scan.nextInt();
-				System.out.println("O valor do seu pedido é: R$ " + sanduiche.valorPedido(distancia, i - 1));
-				System.out.println("Seu pedido chegará em " + sanduiche.tempoDeEntrega(distancia) + " min.");	
+				System.out.println("O valor do seu pedido Ã©: R$ " + sanduiche.valorPedido(distancia, i - 1));
+				System.out.println("Seu pedido chegarÃ¡ em " + sanduiche.tempoDeEntrega(distancia) + " min.");	
 				break;
 			case 2:
 				Massa massa = new Massa();
 				int tipoDeMassa;
 				String molho;
 				
-				System.out.println("\nVocê escolheu **Massa**\n");
+				System.out.println("\nVocÃª escolheu **Massa**\n");
 				
-				System.out.println("Selecione a opção de massa que você deseja:\n1 - Macarrão\n2 - Pizza\n3 - Lasanha");
+				System.out.println("Selecione a opÃ§Ã£o de massa que vocÃª deseja:\n1 - MacarrÃ£o\n2 - Pizza\n3 - Lasanha");
 				tipoDeMassa = scan.nextInt();
 				massa.setTipoDeMassa(massa.getTiposDeMassa()[tipoDeMassa - 1]);
 				
-				System.out.println("Informe o molho que você deseja:");
+				System.out.println("Informe o molho que vocÃª deseja:");
 				molho = scan.next();
 				massa.setMolho(molho);
 				
-				System.out.println("Informe sua distância em km para calcularmos o tempo de entrega e o valor do seu pedido:");
+				System.out.println("Informe sua distÃ¢ncia em km para calcularmos o tempo de entrega e o valor do seu pedido:");
 				distancia = scan.nextInt();
-				System.out.println("O valor do seu pedido é: R$ " + massa.valorPedido(distancia, massa.getTipoDeMassa()));
-				System.out.println("Seu pedido chegará em " + massa.tempoDeEntrega(distancia) + " min.");			
+				System.out.println("O valor do seu pedido Ã©: R$ " + massa.valorPedido(distancia, massa.getTipoDeMassa()));
+				System.out.println("Seu pedido chegarÃ¡ em " + massa.tempoDeEntrega(distancia) + " min.");			
 				break;
 			case 3:
 				Bolo bolo = new Bolo();
 				
-				System.out.println("\nVocê escolheu **Bolo**\n");
+				System.out.println("\nVocÃª escolheu **Bolo**\n");
 				
-				System.out.println("Insira a massa que você deseja: ");
+				System.out.println("Insira a massa que vocÃª deseja: ");
 				String massaBolo = scan.next();
-				System.out.println("Insira a cobertura que você deseja: ");
+				System.out.println("Insira a cobertura que vocÃª deseja: ");
 				String cobertura = scan.next();
-				System.out.println("Insira o recheio que você deseja: ");
+				System.out.println("Insira o recheio que vocÃª deseja: ");
 				String recheio = scan.next();
 				
-				System.out.println("Informe sua distância em km para calcularmos o tempo de entrega e o valor do seu pedido:");
+				System.out.println("Informe sua distÃ¢ncia em km para calcularmos o tempo de entrega e o valor do seu pedido:");
 				distancia = scan.nextInt();
-				System.out.println("O valor do seu pedido é: R$ " + bolo.valorPedido(distancia));
-				System.out.println("Seu pedido chegará em " + bolo.tempoDeEntrega(distancia) + " min.");			
+				System.out.println("O valor do seu pedido Ã©: R$ " + bolo.valorPedido(distancia));
+				System.out.println("Seu pedido chegarÃ¡ em " + bolo.tempoDeEntrega(distancia) + " min.");			
 				break;
 			default:
-				System.out.println("Opção indisponível");
+				System.out.println("OpÃ§Ã£o indisponÃ­vel");
 				break;
 		}
 	}
